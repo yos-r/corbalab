@@ -1,0 +1,19 @@
+module CosEvents 
+{
+   interface PushConsumer 
+{
+         void push(in string message);
+	 void disconnect_push_consumer();
+   };
+   interface PushSupplier {         
+	 void disconnect_push_supplier();
+   };
+
+   interface PullConsumer {
+   	 void disconnect_pull_consumer();
+   };
+   interface PullSupplier {
+         void pull(inout string message);
+   	 void disconnect_pull_supplier();
+   };
+   };

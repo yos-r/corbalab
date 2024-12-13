@@ -1,0 +1,18 @@
+
+module Banque {
+    
+    // Interface Compte
+    interface Compte {
+        readonly attribute long code;
+        readonly attribute double solde;
+        void depot(in long montant);
+        void retrait(in long montant);
+    };
+
+    // Interface Conseiller
+    interface Conseiller {
+        Compte newCompte(in long code);
+        Compte getCompte(in long code);
+        void virement(in Compte source, in Compte cible, in long montant);
+    };
+};
