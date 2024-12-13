@@ -1,4 +1,3 @@
-// Définition des interfaces CORBA pour la banque
 
 module Banque {
     
